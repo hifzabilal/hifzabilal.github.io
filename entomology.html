@@ -414,6 +414,32 @@ h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.
  .mosaic figcaption{left:6px;bottom:6px;max-width:calc(100% - 12px);padding:5px 7px 6px;font-size:11px;outline-offset:-3px}
  .mosaic figcaption i{font-size:12.5px}
 }
+
+/* ===== v7 readability ===== */
+:root{--ink-2:#2B3036;--ink-3:#4A5058}
+body{font-size:18px;line-height:1.72;text-rendering:optimizeLegibility}
+p,li,figcaption,dd{text-wrap:pretty}
+h1,h2,h3{text-wrap:balance}
+h1{line-height:1.12}
+h2{line-height:1.22}
+main p,main li{max-width:68ch}
+.lead{line-height:1.6;max-width:62ch}
+main ul:not(.chips):not(.nav-list):not(.chipline) li{margin-bottom:10px}
+main ul:not(.chips):not(.nav-list):not(.chipline) li:last-child{margin-bottom:0}
+.small,.org-s,.tag{font-size:15px}
+.chips li{font-size:15px;line-height:1.45}
+.gallery figcaption{font-size:15px;line-height:1.5}
+.row p,.vol p,.tl p{line-height:1.68}
+main a:not(.btn):not(.next):not(.tl):not([class]){text-decoration-thickness:1px;text-underline-offset:3px}
+.foot{font-size:15.5px}
+@media (max-width:700px){
+ body{font-size:17px;line-height:1.7}
+ .wrap{padding:0 20px}
+ .lead{font-size:18px}
+ h1{font-size:clamp(30px,8.4vw,38px)}
+ h2{font-size:clamp(23px,6.4vw,28px)}
+ .gallery figcaption,.chips li,.small,.org-s,.tag{font-size:15px}
+}
 </style>
 </head>
 <body class="v-top">
