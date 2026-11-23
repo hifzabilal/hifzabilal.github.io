@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hifzabilal.github.io/sitemap.xml
