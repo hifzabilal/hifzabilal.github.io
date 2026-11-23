@@ -16,9 +16,9 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%2316191D'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' fill='white' text-anchor='middle'%3EHB%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=optional">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=optional" media="print" onload="this.media='all'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=optional"></noscript>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=optional">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=optional" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,600;1,8..60,600&display=optional"></noscript>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfilePage", "url": "https://hifzabilal.github.io/", "mainEntity": {"@type": "Person", "name": "Hifza Bilal", "jobTitle": "Plant health researcher", "address": {"@type": "PostalAddress", "addressLocality": "Faisalabad", "addressCountry": "PK"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "Government College University Faisalabad"}, "knowsAbout": ["Plant pathology", "Molecular diagnostics", "Integrated Pest Management", "Plant genetics", "Host plant resistance", "Plant tissue culture"]}}</script>
 <style>:root{--ink:#242322;--ink-2:#3F3E3C;--ink-3:#5E5E5E;--line:#E1E5D8;--wash:#F6F8F1;--lime:#92C323;--lime-2:#B5DC5A;--accent:#457010;--accent-2:#2F4F09;--soft:#EEF6DC;--soft-2:#D2EB9C;--slab:'Roboto Slab',Georgia,serif;--mono:'IBM Plex Mono',ui-monospace,monospace;--sans:'Open Sans',system-ui,sans-serif;--r:4px;--side:264px;
 --leaf:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg fill='none' stroke='%2392C323' stroke-opacity='.22' stroke-width='1.2'%3E%3Cpath d='M20 70c10-24 30-30 44-30-4 16-18 34-44 30z'/%3E%3Cpath d='M20 70c14-10 26-18 44-30'/%3E%3Cpath d='M78 112c6-16 20-22 30-22-3 12-12 24-30 22z'/%3E%3Cpath d='M78 112c9-7 18-14 30-22'/%3E%3C/g%3E%3C/svg%3E")}
@@ -383,14 +383,37 @@ h1{font-weight:600;letter-spacing:-.015em}h2{font-weight:600}h3{font-weight:600}
 /* ===== v5 livelier sections ===== */
 .why .lead{max-width:760px;position:relative;padding:22px 24px 22px 26px;background:var(--wash);border-left:3px solid var(--accent);border-radius:0 var(--r) var(--r) 0;margin-top:18px}
 @media (max-width:700px){.why .lead{font-size:17px;padding:18px 18px 18px 20px}}
-@supports (animation-timeline: view()){
- @media (prefers-reduced-motion:no-preference){
-  .flow>a,.fit>div,.gallery figure,.tl,.row,.course,.vol>div{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
- }
-}
-@keyframes rise{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
 .skills .sk-h{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:500;margin:0 0 12px;line-height:1.4}
 h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.5px;color:var(--ink-3)}
+
+/* ===== v6 botanist polish: fewer template tells ===== */
+:root{--mono:var(--sans)}
+.mono,.tag,.k,.small,.d,.spec span,.eyebrow,.sk-h,h2.eyebrow,time{font-variant-numeric:tabular-nums}
+.eyebrow,h2.eyebrow,.skills .sk-h,.side-card h3,.spec span{text-transform:none;letter-spacing:0;font-family:var(--sans);font-size:15px;font-weight:600;color:var(--accent)}
+.page-head .eyebrow{font-size:15px}
+/* herbarium specimen label on hero photos */
+.mosaic figure{box-shadow:none;border:1px solid var(--line)}
+.mosaic figcaption{left:10px;right:auto;bottom:10px;max-width:calc(100% - 20px);background:#fff;color:var(--ink);border:1px solid var(--ink);outline:1px solid #fff;outline-offset:-4px;padding:7px 10px 8px;border-radius:0;font-size:12.5px;line-height:1.35;box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.mosaic figcaption i{display:block;font-family:var(--slab);font-size:14px;font-weight:600;font-style:italic}
+.mosaic figcaption span{display:block;color:var(--ink-2)}
+/* mobile menu: no fake numbering, no arrows */
+@media (max-width:999px){
+ .v-top .nav-list>li>a::before{content:none}
+ .v-top .nav-list>li>a::after{content:none}
+ .v-top .nav-list li.on>a{box-shadow:inset 3px 0 0 var(--accent);padding-left:14px!important}
+}
+
+.hero .chipline{gap:6px 18px}
+.hero .chipline li::before,.hero .chipline li::after{content:none!important}
+.factband .f span{line-height:1.4;display:block}
+@media (max-width:999px){
+ .v-top .nav-list li.on>a::after{content:none}
+ html.nav-open .bar{position:fixed;left:0;right:0;top:0}
+}
+@media (max-width:600px){
+ .mosaic figcaption{left:6px;bottom:6px;max-width:calc(100% - 12px);padding:5px 7px 6px;font-size:11px;outline-offset:-3px}
+ .mosaic figcaption i{font-size:12.5px}
+}
 </style>
 </head>
 <body class="v-top">
@@ -400,7 +423,7 @@ h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.
   <a class="brand" href="index.html"><svg class="mark" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="24" fill="#92C323"/><path d="M24 38V22" stroke="#242322" stroke-width="2.6" stroke-linecap="round"/><path d="M24 25c-1-7-6-11-13-11 0 7 5 12 13 11z" fill="#242322"/><path d="M24 22c1-6 5-10 12-10 0 7-5 11-12 10z" fill="#fff"/></svg><span><b>Hifza <span>Bilal</span></b><small>Plant health portfolio</small></span></a>
   <button type="button" class="menu-btn" aria-expanded="false" aria-controls="site-nav"><span class="mb-ic" aria-hidden="true"><i></i><i></i><i></i></span><span class="mb-tx">Menu</span></button>
   <nav id="site-nav" class="site-nav" aria-label="Main"><ul class="nav-list"><li class="on"><a href="index.html" aria-current="page">Home</a></li><li><a href="research.html">Research</a></li><li><a href="experience.html">Experience</a></li><li><a href="skills.html">Skills & Courses</a></li><li><a href="achievements.html">Achievements</a></li><li><a href="volunteering.html">Volunteering</a></li></ul>
-  <div class="nav-foot"><p>Plant health · Genetics · IPM</p><p><a href="mailto:hifzabilal11@gmail.com">hifzabilal11@gmail.com</a></p></div>
+  <div class="nav-foot"><p><a href="mailto:hifzabilal11@gmail.com">hifzabilal11@gmail.com</a></p></div>
   </nav>
 </header>
 <main id="main"><div class="wrap">
@@ -408,17 +431,17 @@ h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.
   <div class="wrap hero-grid">
     <div>
       <ul class="chipline"><li>First position, BS Botany</li><li>CGPA 3.88/4.00</li><li>Faisalabad, Pakistan</li></ul>
-      <h1 id="hero-title">From diagnosis to durable resistance, for <em>sustainable crop protection</em>.</h1>
+      <h1 id="hero-title">From diagnosis to durable resistance, for sustainable crop protection.</h1>
       <p class="lead">I am Hifza Bilal, a Botany graduate trained in plant pathology, agricultural biotechnology and entomology at the Ayub Agricultural Research Institute (AARI). I want to help farmers spray less by combining early diagnosis, durable resistance and biological control within integrated pest management.</p>
       <div class="btns">
-        <a class="btn solid" href="research.html">Read my research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+        <a class="btn solid" href="research.html">Read my research</a>
         <a class="btn" href="experience.html">See my training</a>
       </div>
     </div>
     <div class="mosaic">
-      <figure><img src="assets/photos/sugarcane-eyespot.webp" srcset="assets/photos/sugarcane-eyespot-s.webp 640w, assets/photos/sugarcane-eyespot.webp 774w" sizes="(max-width: 920px) 46vw, 290px" width="774" height="1032" alt="Sugarcane stalk split open showing red internal discoloration" loading="eager" fetchpriority="high"><figcaption><b>01 Diagnose</b>Diseased sugarcane sampled in a field survey</figcaption></figure>
-      <figure><img src="assets/photos/page-gel-lanes.webp" srcset="assets/photos/page-gel-lanes-s.webp 640w, assets/photos/page-gel-lanes.webp 903w" sizes="(max-width: 920px) 46vw, 290px" width="903" height="1200" alt="Polyacrylamide gel with loaded sample lanes" loading="eager" fetchpriority="high"><figcaption><b>02 Resist</b>SSR markers for wheat rust genes</figcaption></figure>
-      <figure><img src="assets/photos/fall-armyworm-larva.webp" srcset="assets/photos/fall-armyworm-larva-s.webp 640w, assets/photos/fall-armyworm-larva.webp 900w" sizes="(max-width: 920px) 46vw, 290px" width="900" height="1200" alt="Fall armyworm larva beside a maize leaf" loading="eager" fetchpriority="high"><figcaption><b>03 Manage</b>Fall armyworm in maize IPM</figcaption></figure>
+      <figure><img src="assets/photos/sugarcane-eyespot.webp" srcset="assets/photos/sugarcane-eyespot-s.webp 640w, assets/photos/sugarcane-eyespot.webp 774w" sizes="(max-width: 920px) 46vw, 290px" width="774" height="1032" alt="Sugarcane stalk split open showing red internal discoloration" loading="eager" fetchpriority="high"><figcaption><i>Saccharum officinarum</i><span>Diseased stalk, field survey</span></figcaption></figure>
+      <figure><img src="assets/photos/page-gel-lanes.webp" srcset="assets/photos/page-gel-lanes-s.webp 640w, assets/photos/page-gel-lanes.webp 903w" sizes="(max-width: 920px) 46vw, 290px" width="903" height="1200" alt="Polyacrylamide gel with loaded sample lanes" loading="eager" fetchpriority="high"><figcaption><i>Triticum aestivum</i><span>SSR markers for rust resistance</span></figcaption></figure>
+      <figure><img src="assets/photos/fall-armyworm-larva.webp" srcset="assets/photos/fall-armyworm-larva-s.webp 640w, assets/photos/fall-armyworm-larva.webp 900w" sizes="(max-width: 920px) 46vw, 290px" width="900" height="1200" alt="Fall armyworm larva beside a maize leaf" loading="eager" fetchpriority="high"><figcaption><i>Spodoptera frugiperda</i><span>Larva on maize, IPM screening</span></figcaption></figure>
     </div>
   </div>
 </section>
@@ -431,22 +454,19 @@ h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.
   </div>
 </section>
 <section class="block first why" style="padding-top:64px">
-  <p class="eyebrow">Why plant health</p>
   <h2>It started with what I saw on our food.</h2>
   <p class="lead">Where I grew up, fruits and vegetables are sprayed far more often than they need to be, and the residues end up on our plates. I first looked to genetics for crops that could defend themselves. The more I read, the clearer it became that pests and pathogens keep adapting and no one method holds them back for long. That is why I chose plant health, where diagnosis, resistance and biological control are used together.</p>
 </section>
 <section class="block">
-  <p class="eyebrow">My path in plant health</p>
   <h2>Diagnose, resist, manage. Each placement raised my next question.</h2>
   <p class="lead">I contacted AARI scientists directly, was interviewed, and trained in three of their institutes. Together they cover the three steps that crop protection depends on.</p>
   <div class="flow">
-    <a href="pathology.html"><div class="ph"><img src="assets/photos/powdery-mildew-microscope.webp" srcset="assets/photos/powdery-mildew-microscope-s.webp 640w, assets/photos/powdery-mildew-microscope.webp 720w" sizes="(max-width: 920px) 92vw, 380px" width="720" height="944" alt="Powdery mildew on a cowpea leaf seen under the microscope" loading="lazy" decoding="async"></div><div class="tx"><span class="step">Step 01 · Diagnose</span><h3>Plant Pathology</h3><p>Isolating and identifying pathogens, diagnosing disease in the field and lab, and testing biological control.</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></a>
-    <a href="biotechnology.html"><div class="ph"><img src="assets/photos/dna-extract-tube.webp" srcset="assets/photos/dna-extract-tube-s.webp 640w, assets/photos/dna-extract-tube.webp 903w" sizes="(max-width: 920px) 92vw, 380px" width="903" height="1200" alt="Tube of extracted plant DNA held in the hand" loading="lazy" decoding="async"></div><div class="tx"><span class="step">Step 02 · Resist</span><h3>Agricultural Biotechnology</h3><p>Screening wheat for rust resistance genes with SSR markers, and plant tissue culture.</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></a>
-    <a href="entomology.html"><div class="ph"><img src="assets/photos/screening-trays.webp" srcset="assets/photos/screening-trays-s.webp 640w, assets/photos/screening-trays.webp 900w" sizes="(max-width: 920px) 92vw, 380px" width="900" height="1200" alt="Rows of rearing cups prepared for a maize variety screening" loading="lazy" decoding="async"></div><div class="tx"><span class="step">Step 03 · Manage</span><h3>Entomology</h3><p>Rearing the invasive fall armyworm and screening six maize varieties for resistance within IPM.</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></a>
+    <a href="pathology.html"><div class="ph"><img src="assets/photos/powdery-mildew-microscope.webp" srcset="assets/photos/powdery-mildew-microscope-s.webp 640w, assets/photos/powdery-mildew-microscope.webp 720w" sizes="(max-width: 920px) 92vw, 380px" width="720" height="944" alt="Powdery mildew on a cowpea leaf seen under the microscope" loading="lazy" decoding="async"></div><div class="tx"><span class="step">Step 1, Diagnose</span><h3>Plant Pathology</h3><p>Isolating and identifying pathogens, diagnosing disease in the field and lab, and testing biological control.</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></a>
+    <a href="biotechnology.html"><div class="ph"><img src="assets/photos/dna-extract-tube.webp" srcset="assets/photos/dna-extract-tube-s.webp 640w, assets/photos/dna-extract-tube.webp 903w" sizes="(max-width: 920px) 92vw, 380px" width="903" height="1200" alt="Tube of extracted plant DNA held in the hand" loading="lazy" decoding="async"></div><div class="tx"><span class="step">Step 2, Resist</span><h3>Agricultural Biotechnology</h3><p>Screening wheat for rust resistance genes with SSR markers, and plant tissue culture.</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></a>
+    <a href="entomology.html"><div class="ph"><img src="assets/photos/screening-trays.webp" srcset="assets/photos/screening-trays-s.webp 640w, assets/photos/screening-trays.webp 900w" sizes="(max-width: 920px) 92vw, 380px" width="900" height="1200" alt="Rows of rearing cups prepared for a maize variety screening" loading="lazy" decoding="async"></div><div class="tx"><span class="step">Step 3, Manage</span><h3>Entomology</h3><p>Rearing the invasive fall armyworm and screening six maize varieties for resistance within IPM.</p><span class="go">Explore <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></span></div></a>
   </div>
 </section>
 <section class="block">
-  <p class="eyebrow">Ready for plant health in sustainable cropping systems</p>
   <h2>What I already bring to the field</h2>
   <p class="lead">Plant health training asks students to diagnose problems, understand their causes and design solutions that are safe for people and the environment. This is where my experience already stands.</p>
   <div class="fit">
@@ -477,7 +497,6 @@ h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.
   </div>
 </section>
 <section class="block">
-  <p class="eyebrow">Recognition</p>
   <h2>Awards and leadership</h2>
   <div class="awards">
     <a href="achievements.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="14" r="6"/><path d="M8.5 9 6 2h4l2 5 2-5h4l-2.5 7M12 11.5l.9 1.8 2 .3-1.45 1.4.35 2-1.8-.95-1.8.95.35-2L9.1 13.6l2-.3z"/></svg><b>First Position in BS Botany</b><span>07/2026 · CGPA 3.88/4.00</span></a>
@@ -489,15 +508,14 @@ h2.eyebrow{font-family:var(--mono);font-weight:500;line-height:1.4;font-size:12.
 <section class="block dark">
   <div class="goal">
     <div>
-      <p class="eyebrow">Where I am heading</p>
       <h2>Fewer sprays and lasting resistance, for farmers in Pakistan and beyond.</h2>
       <p class="lead">Up to 40% of global crop production is lost to pests, and resistance genes often break down as pathogens evolve. I plan to study how durable resistance, early diagnosis and biological control can work together within IPM, first through a Master's in plant health and then a PhD, and to share these methods with farmers and students in Pakistan.</p>
     </div>
-    <div class="btns"><a class="btn solid" href="research.html">Read my research <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a><a class="btn" href="mailto:hifzabilal11@gmail.com">Email me</a></div>
+    <div class="btns"><a class="btn solid" href="research.html">Read my research</a><a class="btn" href="mailto:hifzabilal11@gmail.com">Email me</a></div>
   </div>
 </section>
 </div>
-<footer class="foot"><div class="wrap"><p>Hifza Bilal · Faisalabad, Pakistan</p><p><a href="mailto:hifzabilal11@gmail.com">hifzabilal11@gmail.com</a></p></div></footer>
+<footer class="foot"><div class="wrap"><p>Hifza Bilal, Faisalabad, Pakistan</p><p><a href="mailto:hifzabilal11@gmail.com">hifzabilal11@gmail.com</a></p></div></footer>
 </main>
 <dialog class="lb" id="lb" aria-label="Image viewer">
   <div class="lb-in">
